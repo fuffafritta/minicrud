@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>IIT RBCS tasks</title>
+	</head>
+	<body>
+		<section id="taskapp">
+			<header id="header">
+				<h1>tasks</h1>
+				<input id="new-task" placeholder="Click here to add a new task!" autofocus>
+			</header>
+			<section id="main">
+				<input id="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label>
+				<ul id="task-list">
+                <!-- here the tasks li -->
+                </ul>
+			</section>
+			<footer id="footer"></footer>
+		</section>
+		<footer id="info">
+			<p>Double-click to edit a task</p>
+		</footer>
+		<script src="js/base.js"></script>
+		<script src="js/jquery.js"></script>
+	</body>
+    <script>
+    $( document ).ready(function() {
+        readTask();
+        $( "#new-task" ).keydown(function( event ) {
+            if(event.which== 13) {addTask();}
+        });
+    });
+        </script>
+</html>
+
